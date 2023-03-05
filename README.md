@@ -33,15 +33,6 @@ Install `espeak-ng`
 
 ## USB speaker
 
-Ensure that USB speaker is used
-edit `/usr/share/alsa/alsa.conf`
-Scroll and find the following two lines:
-```
-defaults.ctl.card 0
-defaults.pcm.card 0
-```
-Change the 0 to a 1 to match the card number of the USB device :
-```
-defaults.ctl.card 1
-defaults.pcm.card 1
-```
+Ensure that USB speaker is used by changing speaker in `raspi-config`
+
+
