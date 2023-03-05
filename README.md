@@ -44,4 +44,4 @@ Check out [SETUP.md](SETUP.md)
 - **this is not a novelty, but part of real life.** I want to use this on a regular basis; for it to be really meaningful.
 
 ## ideas
-- [ ] web interface for editing & printing chunks of code. like dynamicland's wall of code.
+- [ ] web interface for editing & printing chunks of code. like dynamicland's operating system wall.
