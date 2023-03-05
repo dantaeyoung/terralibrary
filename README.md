@@ -31,6 +31,7 @@ Check out [SETUP.md](SETUP.md)
 
 - screens are horrible because they demand visual and thus cognitive attention; they lock you into a place and bodily orientation
 - paper is lovely because it moves around in space, has spatial affordances, and thus participates in psychospatial life; you can hide tuck fold unfold file page glue stick pin crumple paper
+  -  see: "the myth of the paperless office"
 - audio is somatically freeing because your body can be in any position and you can still listen; others can listen, too
 - barcode scanners are like magic wands: they engage the body, and it's clear to everyone else what you're doing when you point, too
 - the spoken word is clear
