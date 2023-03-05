@@ -1,17 +1,26 @@
 # terralibrary
 
 computers are magic.
+
 screens are horrible.
+
 paper is lovely.
+
 books are beautiful.
 
-terralibrary is an experiment in creating a library computer that doesn't need a screen.
+*terralibrary is an experiment in creating a library computer that doesn't need a screen.*
 
 ## how
 
-barcode reader
-screenless programming + barcode reader + audio = ?
+- a barcode reader as magic wand
+- raspberry pi as brain
+- speaker to speak
+- receipt printer to print
 
+## inspo
+
+- [Dynamicland](https://dynamicland.org/)
+- [ELECTRONICOS FANTASTICOS!](https://www.electronicosfantasticos.com/)
 
 ## setup
 
