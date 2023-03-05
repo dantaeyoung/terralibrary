@@ -20,28 +20,18 @@ books are beautiful.
 ## inspo
 
 - [Dynamicland](https://dynamicland.org/)
+- [Hypercard In The World](https://tashian.com/articles/dynamicland/)
 - [ELECTRONICOS FANTASTICOS!](https://www.electronicosfantasticos.com/)
 
 ## setup
 
-Install pipenv
+Check out [SETUP.md](SETUP.md)
 
+## philosophy
 
-~~Install Docker to run Larynx~~
-- ~~`sudo apt-get install apt-transport-https ca-certificates software-properties-common -y`~~
-- ~~`curl -sSL https://get.docker.com | sh`~~
-
-~~`Install Larynx~~`
-- ~~`curl https://raw.githubusercontent.com/rhasspy/larynx/master/docker/larynx-server > larynx-server`~~
-- ~~`chmod +755 larynx-server`~~
-- ~~move `larynx-server` to somewhere (like `~/bin` or `~/heart/bin`)~~
-- ~~`sudo ./larynx-server`~~
-
-Install `espeak-ng`
-- `sudo apt-get install espeak-ng`
-
-## USB speaker
-
-Ensure that USB speaker is used by changing speaker in `raspi-config`
-
+- screens are horrible because they demand visual and thus cognitive attention; they lock you into a place and orientation
+- paper is lovely because it moves around in space, has spatial affordances, and thus participates in psychospatial life; you can hide tuck fold unfold file page glue stick pin crumple paper
+- audio is somatically freeing because your body can be in any position and you can still listen
+- barcode scanners are like magic wands: they engage the body, and it's clear to everyone else what you're doing when you point, too
+- the spoken word is clear
 
