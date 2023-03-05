@@ -42,3 +42,6 @@ Check out [SETUP.md](SETUP.md)
 - **let the physical world keep things mysterious.** anything to do with secrecy or authentication should happen through paper. (printed qr code as password, checksum match in order to login)
 - **screens do not scroll.** scrolling is a disassociative abomination. text that doesn't fit shrinks to fit the screen.
 - **this is not a novelty, but part of real life.** I want to use this on a regular basis; for it to be really meaningful.
+
+## ideas
+- [ ] web interface for editing & printing chunks of code. like dynamicland's wall of code.
