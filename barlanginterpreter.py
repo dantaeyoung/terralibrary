@@ -28,7 +28,7 @@ class BarlangInterpreter:
         print("[CMD] ", cmd)
         thisstate = self.to_state()
         if(arg):
-            thisstate['param'] = arg  
+            thisstate['arg'] = arg  
         obj_str = repr(thisstate)
         print("[objstr] " + obj_str)
         try:
@@ -69,9 +69,15 @@ class BarlangInterpreter:
         if(self.mode == "stack"):
             self.stack.append(s)
             say("appended " + s)
+            return
 
 
         if(self.mode == "run"):
-            self.try_to_run(self.stack[-1], arg=s)
+            ## TODO FIX
+            if(len(self.stack) > 0):
+                self.try_to_run(self.stack[-1], arg=s)
+            else:
+                say("Nothing to run!")
+            return
 
 

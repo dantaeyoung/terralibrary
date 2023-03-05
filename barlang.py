@@ -1,10 +1,14 @@
 from say import say
 from firebase import firebase
 import time
+import pygame
 
 firebase = firebase.FirebaseApplication('https://terralibrary-a9249-default-rtdb.firebaseio.com', None)
 
-def ooga(bloop):
+def excl_ooga(bloop):
+    pygame.mixer.init()
+    bowl= pygame.mixer.Sound("bowl.mp3")
+    bowl.play()
     say("Ooooga booga")
 
 
@@ -36,14 +40,15 @@ def runstack(s):
     return
 
 def add(s):
+    val = s['arg']
     data = {
-        'value': s,
+        'value': val,
         'timestamp': time.time()
     }
     result = firebase.post('/list', data=data)
-    say("add " + str(s['param']))
+    say("add " + str(val))
     return
 
 def remove(s):
-    say("remove " + str(s['param']))
+    say("remove " + str(s['arg']))
     return
