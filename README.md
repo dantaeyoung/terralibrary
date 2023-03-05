@@ -8,7 +8,7 @@ paper is lovely.
 
 books are beautiful.
 
-*terralibrary is a magic computer for a beautiful library that doesn't need a screen to use.*
+*terralibrary is a magic screenless computer for a beautiful library.*
 
 ## what
 
