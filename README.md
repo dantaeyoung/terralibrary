@@ -34,4 +34,4 @@ Check out [SETUP.md](SETUP.md)
 - audio is somatically freeing because your body can be in any position and you can still listen; others can listen, too
 - barcode scanners are like magic wands: they engage the body, and it's clear to everyone else what you're doing when you point, too
 - the spoken word is clear
-
+- computers should be weird
