@@ -8,7 +8,7 @@ paper is lovely.
 
 books are beautiful.
 
-*terralibrary is a magic computer for a beautiful library that doesn't need a screen.*
+*terralibrary is a magic computer for a beautiful library that doesn't need a screen to use.*
 
 ## how
 
@@ -29,9 +29,9 @@ Check out [SETUP.md](SETUP.md)
 
 ## philosophy
 
-- screens are horrible because they demand visual and thus cognitive attention; they lock you into a place and orientation
+- screens are horrible because they demand visual and thus cognitive attention; they lock you into a place and bodily orientation
 - paper is lovely because it moves around in space, has spatial affordances, and thus participates in psychospatial life; you can hide tuck fold unfold file page glue stick pin crumple paper
-- audio is somatically freeing because your body can be in any position and you can still listen
+- audio is somatically freeing because your body can be in any position and you can still listen; others can listen, too
 - barcode scanners are like magic wands: they engage the body, and it's clear to everyone else what you're doing when you point, too
 - the spoken word is clear
 
