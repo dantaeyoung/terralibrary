@@ -1,9 +1,11 @@
 import pygame
 from evdev import InputDevice, categorize, ecodes
-from tera_keycodes import keycodes, to_key, events_to_str, TERA_ENTER
+from tera import keycodes, to_key, events_to_str, TERA_ENTER
 from firebase import firebase
 import time
-import say
+from say import say
+import barlanginterpreter
+import importlib
 
 device = InputDevice("/dev/input/event2")
 device.grab()
@@ -12,27 +14,38 @@ device.grab()
 pygame.mixer.init()
 bowl= pygame.mixer.Sound("bowl.mp3")
 
-say.say("Terra-library is ready.")
+#say.say("Terra-library is ready.")
+say("Ready.")
 
 firebase = firebase.FirebaseApplication('https://terralibrary-a9249-default-rtdb.firebaseio.com', None)
 
 
-
-
-stack = []
-
+tbi = barlanginterpreter.BarlangInterpreter()
 
 
 def process_eventqueue(q):
-    res = events_to_str(q)
+    s = events_to_str(q)
 
     data = {
-        'value': res,
+        'value': s,
         'timestamp': time.time()
     }
 
-    result = firebase.post('/scans', data=data)
-    print(res, result)
+#    result = firebase.post('/scans', data=data)
+#    print(s, result)
+
+    print(s)
+
+    if(s.startswith("#reloadbarlanginterpreter")):
+        say("reloading barlang interpreter")
+        importlib.reload(barlanginterpreter)
+        global tbi
+        tbi = barlanginterpreter.BarlangInterpreter()
+        tbi.reload()
+        return
+
+    tbi.interpret(s)
+
 
     #say.say(res)
 
@@ -47,7 +60,7 @@ def process_eventqueue(q):
 eventqueue = []
 for event in device.read_loop():
     if event.type == ecodes.EV_KEY:
-        print(event)
+#        print(event)
         if(event.code != TERA_ENTER):
             eventqueue.append(event)
         else:
