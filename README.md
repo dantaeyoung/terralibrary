@@ -106,4 +106,4 @@ Check out [SETUP.md](SETUP.md)
   - version isn't spoken unless it's different from current version
   - placeholders are called "placeholder"
   - a little info is given at the end.
-  -  e.g. for `1-(library_write! {{1}} checked_in yes)-1`, it says , "library_write exclamation placeholder 1 checked in yes. this is a version 1 spell, ready to cast."
+  -  e.g. for `1-(library_write! {{1}} checked_in yes)-1`, it says , _"library_write exclamation placeholder 1 checked in yes. this is a version 1 spell, ready to cast."_
