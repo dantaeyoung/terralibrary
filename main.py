@@ -7,7 +7,9 @@ from say import say
 import barlanginterpreter
 import importlib
 
-device = InputDevice("/dev/input/event2")
+
+#TODO make this configurable
+device = InputDevice("/dev/input/event0")
 device.grab()
 
 
@@ -44,6 +46,10 @@ def process_eventqueue(q):
         tbi.reload()
         return
 
+    if(s.startswith("#restart")):
+        say("restarting terra library")
+        quit()
+     
     tbi.interpret(s)
 
 

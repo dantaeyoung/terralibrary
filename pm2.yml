@@ -1,0 +1,4 @@
+apps:
+    script: '/bin/bash' 
+    name: 'terralibrary'
+    args:  ['-c', 'pipenv run python -m main.py']
