@@ -60,8 +60,11 @@ Check out [SETUP.md](SETUP.md)
 
 - clear command structure. 
   - `!!`: system level / debug commands. e.g. `!!reloadbarlanginterpreter`
-  - `print!` or `!print` for commands? or `:print` like vim?
-  - `@mode`? for a modal system
+  - `@` for language/program-level commands. e.g. `@print`
+  - within the language:
+    - `print!` for commands
+    - text for everything else
+
 - is there a distinction between text and commands? maybe the first word is the command? or a command has to be prepended with a `!`?
   - e.g. `print! [string]` or `run! string`
 - maybe there is 'assembling a magic incantation' vs 'running it'
@@ -83,3 +86,6 @@ Check out [SETUP.md](SETUP.md)
       - it doesn't run yet, because we have a placeholder
       - when I scan a barcode `0123456789`, `1-(library_write! 0123456789 checked_in yes)-1` runs
         - which: sets the row of `012345679`, column `checked_in` and sets the value to `yes`
+      - I keep on scanning barcodes, and they keep on getting added
+      - after letting the system sit for a while, the incantation buffer is about to disappear
+      - I scan the code `@print` which prints out the current incantation buffer to a code. This becomes the code that you can scan in to check books in.
