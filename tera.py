@@ -44,7 +44,7 @@ keycodes = {
     39: { "value": ";","upper": ":",  "type": "key"},
     40: { "value": "\'","upper": "\"",  "type": "key"},
     52: { "value": ".","upper": ">",  "type": "key"},
-    53: { "value": "/","upper": "?",  "type": "key"},
+    57: { "value": " ","upper": " ",  "type": "key"},
     28: { "value": "ENTER", "type": "mod"},
     42: { "value": "LEFTSHIFT", "type": "mod"},
 }
