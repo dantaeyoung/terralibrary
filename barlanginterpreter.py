@@ -71,6 +71,9 @@ class BarlangInterpreter:
             say("appended " + s)
             return
 
+        if(self.mode == "say"):
+            say(s)
+            return
 
         if(self.mode == "run"):
             ## TODO FIX

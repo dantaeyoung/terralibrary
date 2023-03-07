@@ -43,6 +43,7 @@ keycodes = {
     43: { "value": "\\","upper": "|",  "type": "key"},
     39: { "value": ";","upper": ":",  "type": "key"},
     40: { "value": "\'","upper": "\"",  "type": "key"},
+    51: { "value": ",","upper": "<",  "type": "key"},
     52: { "value": ".","upper": ">",  "type": "key"},
     57: { "value": " ","upper": " ",  "type": "key"},
     28: { "value": "ENTER", "type": "mod"},

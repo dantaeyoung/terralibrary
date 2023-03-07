@@ -26,7 +26,12 @@ tbi = barlanginterpreter.BarlangInterpreter()
 
 
 def process_eventqueue(q):
-    s = events_to_str(q)
+
+    try:
+        s = events_to_str(q)
+    except Exception as e:
+        say("code reading failed.")
+        return
 
     data = {
         'value': s,
@@ -62,17 +67,19 @@ def process_eventqueue(q):
 
 
 
-
-eventqueue = []
-for event in device.read_loop():
-    if event.type == ecodes.EV_KEY:
+try:
+    eventqueue = []
+    for event in device.read_loop():
+        if event.type == ecodes.EV_KEY:
 #        print(event)
-        if(event.code != TERA_ENTER):
-            eventqueue.append(event)
-        else:
-            if(len(eventqueue) > 0):
-                process_eventqueue(eventqueue)
-                eventqueue = []
+            if(event.code != TERA_ENTER):
+                eventqueue.append(event)
+            else:
+                if(len(eventqueue) > 0):
+                    process_eventqueue(eventqueue)
+                    eventqueue = []
+except Exception as e:
+    say("Program crashed.")
 
 
 device.ungrab()
