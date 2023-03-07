@@ -59,10 +59,19 @@ Check out [SETUP.md](SETUP.md)
 - undo command?
 
 - clear command structure. 
-  - `!!`: system level / debug commands. e.g. `!!reloadbarlanginterpreter`
-  - `@` for language/program-level commands. e.g. `@print`
+
+  - `!!`: system level / debug commands. should rarely be exposed.
+    - e.g. `!!reloadbarlanginterpreter!!` or `!!reset!!`
+
+  - `@` for program-level commands. 
+    - e.g. `@print_current@` prints the current buffer to a receipt printer.
+      - (there could be another `print!` that can be used within the language)
+    - `@mode:say@` sets the mode to just saying each scan out loud
+    - `@volume:lower@` sets the speaking volume lower, etc
+    
   - within the language:
-    - `print!` for commands
+    - `!` for commands. `say!`
+    - `database_write`, `database_read` or `library-set`, `library-get`?
     - text for everything else
 
 - is there a distinction between text and commands? maybe the first word is the command? or a command has to be prepended with a `!`?
@@ -71,10 +80,10 @@ Check out [SETUP.md](SETUP.md)
   - how do you run the command? 'closing the circle' ala Witch Hat Atelier?
     - incantations are a sequence of commands within a wrapper/parenthesis (faux lisp syntax). e.g. `(say! 0123456)`
     - if the parenthesis isn't closed, the command doesn't run. `(say! hello` doesn't run. scanning `)` will run the command.
-    - if the incantation contains a placeholder, the command doesn't run. e.g. `(say! hello, my name is [1])`
-    - the metaphor is: incantation is written. when the incantation is complete, it runs and disappears. if it uses a placeholder, it stays fresh for 5 minutes, at which point it disappears.
-    - incantations can be assembled in `@write` mode. in this mode, any code scanned just gets added to a buffer.
-    - incantations can be cast in `@cast` mode. in this mode, the buffer is either immediately cast or cast as soon as possible. 
+    - if the incantation contains a placeholder, the command doesn't run. e.g. `(say! hello, my name is [1])`. **this becomes a SPELL.**
+    - the metaphor is: incantation is written. when the incantation is complete, it runs and disappears. if it uses a placeholder, it becomes a **SPELL** stays fresh for 5 minutes, at which point it disappears.
+    - maybe: incantations can be assembled in `@write` mode. in this mode, any code scanned just gets added to a buffer.
+    - maybe: incantations can be cast in `@cast` mode. in this mode, the buffer is either immediately cast or cast as soon as possible. 
     - wrappers are how incantations are versioned. such as `1-(say! hello)-1` or `oO--(say! hello)--Oo` or `x|x|x--(say! hello)--x|x|x`. the closing wrapper can just be `)` but it's kind of fun to have it be the same. 
     - so. for example:
       - I scan `1-(`
@@ -89,3 +98,12 @@ Check out [SETUP.md](SETUP.md)
       - I keep on scanning barcodes, and they keep on getting added
       - after letting the system sit for a while, the incantation buffer is about to disappear
       - I scan the code `@print` which prints out the current incantation buffer to a code. This becomes the code that you can scan in to check books in.
+
+- other command ideas
+  -  `library-force-set [row] [column] [val]` - adds a row if row doesn't exist
+- when a current buffer is printed, the print process automagically explains the command
+- when a current buffer is spoken out loud, the speech-to-text adds helpful syntax.
+  - version isn't spoken unless it's different from current version
+  - placeholders are called "placeholder"
+  - a little info is given at the end.
+  -  e.g. for `1-(library_write! {{1}} checked_in yes)-1`, it says 
