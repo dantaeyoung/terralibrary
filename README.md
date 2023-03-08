@@ -101,9 +101,12 @@ Check out [SETUP.md](SETUP.md)
 
 - other command ideas
   -  `library-force-set [row] [column] [val]` - adds a row if row doesn't exist
+  -  nested parentheses (spells) resolve first
 - when a current buffer is printed, the print process automagically explains the command
 - when a current buffer is spoken out loud, the speech-to-text adds helpful syntax.
   - version isn't spoken unless it's different from current version
   - placeholders are called "placeholder"
   - a little info is given at the end.
   -  e.g. for `1-(library_write! {{1}} checked_in yes)-1`, it says , _"library_write exclamation placeholder 1 checked in yes. this is a version 1 spell, ready to cast."_
+- getting data?
+  - library-get [row] [column] gets result of that cell?
